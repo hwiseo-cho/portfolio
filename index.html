@@ -24,13 +24,13 @@
     #aboutContent{display: none;}
     #L_content{width: 50%; height: 100%;}
     #R_content{width: 50%; height: 100%;}
-    #nothing{width: 100%; height: 200px;}
+    #nothing{width: 100%; height: 90px;}
     #topic{margin-top: -90px;writing-mode: vertical-rl; text-align: center; font-size: 70px; margin: 0; font-weight: bold; font-family: 'Noto Sans KR', sans-serif; margin-left: 25px;}
     #topic2{text-align: right; font-size: 25px; margin: 0; font-weight: lighter; color: #808080; margin-left: 108px; margin-right: 20px;}
     #menubar{width: 100%; height: 40px;}
     #menubar>ul{list-style: none; text-align: center;}
     #menubar>ul>li{display: inline-block; margin-left: 4%; margin-right: 10%; color: #808080; cursor: pointer;}
-    #sideImg{width: 100%; height: 303px; background-color: cornflowerblue; margin-top: 40px;}
+    #sideImg{width: 100%; height: 413px; background-color: cornflowerblue; margin-top: 40px;}
     #innerContent{border-left: 1px solid #dbdbdb; width: 100%; height: 80%; text-align: center;}
     #innerContent>div{overflow-y: scroll; height: 890px; }
     #innerContent>div::-webkit-scrollbar{display: none;}
@@ -221,28 +221,10 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
 </body>
-<script>
-    $(function(){
-        $("#Profile").on("click",function(){
-            $("#profileContent").show();
-            $("#projectContent").hide();
-            $("#aboutContent").hide();
-        });
-        $("#Project").on("click",function(){
-            $("#profileContent").hide();
-            $("#projectContent").show();
-            $("#aboutContent").hide();
-        })
-        $("#About").on("click",function(){
-            $("#profileContent").hide();
-            $("#projectContent").hide();
-            $("#aboutContent").show();
-        })
-    });
-</script>
+<script src="js/index.js"></script>
 </html>
