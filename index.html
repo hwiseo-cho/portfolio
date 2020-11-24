@@ -4,8 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<style>
+    p{font-family: 'Noto Sans KR', sans-serif;}
+    body{margin: 0;}
+    #wrapper{width: 100%;  height: 800px; background-color: #fafafa; box-sizing: border-box;}
+    #wrapper>div{ margin: 0;box-sizing: border-box;}
+    #wrapper>div>div{border-right: 1px solid #dbdbdb;border-left: 1px solid #dbdbdb; margin: 0; box-sizing: border-box;}
+    #header{ width: 100%; height: 40px; border-bottom: 0.5px solid #dbdbdb;}
+    #content{width: 100%; height: 890px; text-align: center;}
+    #inContent{width: 1200px; height: 890px; display: inline-block; background-color: white;}
+    #inContent>div{float: left;}
+    #L_content{width: 50%; height: 100%;}
+    #R_content{width: 50%; height: 100%;}
+    #nothing{width: 100%; height: 200px;}
+    #topic{text-align: center; font-size: 70px; margin: 0; font-weight: bold; font-family: 'Noto Sans KR', sans-serif;}
+    #topic2{text-align: left; font-size: 25px; margin: 0; font-weight: lighter; color: #808080; margin-left: 108px;}
+    #menubar{width: 100%; height: 40px;}
+    #menubar>ul{list-style: none; text-align: center;}
+    #menubar>ul>li{display: inline-block; margin-left: 4%; margin-right: 10%; color: #808080; cursor: pointer;}
+    #sideImg{width: 100%; height: 2px; background-color: lightblue; margin-top: 20px;}
+    #innerContent{border-left: 1px solid #dbdbdb; width: 100%; height: 100%; text-align: center;}
+    #profileContent{overflow-y: scroll; height: 890px; }
+    #profileContent::-webkit-scrollbar{display: none;}
+    #profileContent>div{border: 0.5px solid #dbdbdb; width: 80%; display: inline-block; margin-top: 10px; margin-bottom: 10px; box-shadow: 1px 1px 12px 3px lightgray;}
+    #profileCon1>p{text-align: left; margin-left: 50px; margin-right: 40px;}
+    #profileCon2>p{text-align: left; margin-left: 50px; margin-right: 40px;}
+    #profileCon1{height: 1050px;}
+    #profileCon2{height: 900px;}
+    #profile{border: 2px solid #dbdbdb; border-radius: 50%; width: 200px; height: 200px; display: flex; margin-left: 140px; margin-top: 40px;}
+    #profileImg{border: 0.5px solid #dbdbdb; border-radius: 50%; width: 190px; height: 190px; margin: auto;}
+    #info{font-size: 20px;float: left; margin-left: 20px; color: #808080; font-family: 'Noto Sans KR', sans-serif;}
+    .title{font-weight: bold; font-size: 20px;}
+    .name{font-weight: 600;}
+    .date{font-size: 13px; color: gray;}
+    .aboutTitle{font-weight: lighter;}
+</style>
 </head>
 <body>
-    <h1>Portfolio</h1>
+    <div id="wrapper">
+        <div id="header">
+        </div>
+        <div id="content">
+            <div id="inContent">
+                <div id="L_content">
+                    <div id="nothing"></div>
+                    <p id="topic">PORTFOLIO</p>
+                    <p id="topic2">Developer</p>
+                    <div id="sideImg"></div>
+                    <!-- <div id="profile">
+                        <img id="profileImg" src="images/프로필.jpg" alt="">
+                    </div> -->
+                    <p></p>
+                </div>
+                <div id="R_content">
+                    <div id="menubar">
+                        <ul>
+                            <li>Profile</li>
+                            <li>Project</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                    <div id="innerContent">
+                        <div id="profileContent">
+                            <div id="profileCon1">
+                                <p id="info"><b>Info</b></p>
+                                <div id="profile">
+                                    <img id="profileImg" src="images/프로필.jpg" alt="">
+                                </div>
+                                <p class="title">- Introduce</p>
+                                <p class="aboutTitle">
+                                    ‘가장 뜨거운 불에서 가장 강한 강철이 나온다.’<br>
+                                    ‘쇠는 두드릴수록 단단해진다.’<br>
+                                    제가 가장 좋아하는 명언과 속담입니다. 이처럼 아무리 힘들고 어려운 때가 와도 끊임없이 
+                                    도전하며 성장하는 개발자가 될 것입니다. 입사하게 되면 분명히 모르는 부분도 있고 이해하지 못하는 
+                                    부분도 있을 것입니다. 이러한 새로운 부분에 두려워하지 않고 계속해서 공부하고 제 것으로 만들 것이며 
+                                    이미 익숙한 로직, 알고리즘만 생각하지 않고 이를 응용하여 더욱 좋은 코드를 작성할 수 있도록 할 것입니다.  
+                                </p>
+
+                                <p class="title">- Experiences</p>
+                                <p class="name">KH정보교육원(스마트 콘텐츠 융합 응용SW 엔지니어 양성과정(5))</p>
+                                <p class="date">2020.05.07~2020.12.08</p>
+                                <p class="aboutTitle">
+                                    HTML/CSS/JavaScript를 통한 UI 설계 및 구현과 JAVA 기초부터 
+                                    JSP/Servlet, DB(Oracle) 설계 및 구현을 통한 웹 어플리케이션의 전반적인 이론과 실무에 관한
+                                    교육을 프로젝트 기간을 포함하여 7개월간의 교육과정을 이수하였습니다.
+                                </p>
+                                <p class="name">한국방송통신대학교 컴퓨터과학과(휴학)</p>
+                                <p class="date">2020.03~진행중</p>
+                                <p class="aboutTitle">
+                                    개발자가 되기로 마음의 결정을 내린 후 지식을 쌓기 위해 한국방송통신대학교 
+                                    컴퓨터과학과에 입학하였습니다. 1학년 1학기를 다닌 상태이고 학원의 교육과정과
+                                    병행하다 보니 두 가지 모두 모호해질것 같아 한 가지를 확실히 하기 위해 휴학을 
+                                    신청했고 2021년에 복학예정입니다.
+                                </p>
+                            </div>
+                            <div id="profileCon2">
+                                <p id="info"><b>Skill</b></p><br><br><br>
+                                <p class="title">JAVA(8 ver)</p>
+                                <p class="date">신입 개발자로서 자바 기초에 대한 부분들을 인지하고 활용할 수 있으며 Java기반으로 웹페이지를 구현할 수 있습니다.</p>
+                                <p class="title">HTML5/CSS3/JavaScript(JQuery)</p>
+                                <p class="date">
+                                    웹 페이지에서 원하는 UI를 구현할 수 있습니다.<br>
+                                    HTML5를 바탕으로 만들어진 틀에 CSS3를 적용할 수 있습니다.<br>
+                                    웹페이지에서 기능에 맞게 이벤트를 설정할 수 있습니다.(제이쿼리의 문법을 잘 이해하고 있고 활용할 수 있습니다.)
+                                </p>
+                                <p class="title">Ajax</p>
+                                <p class="date">Ajax를 통한 비동기통신을 활용하여 웹페이지를 구현할 수 있습니다.</p>
+                                <p class="title">Oracle(DB)</p>
+                                <p class="date">기본적인 SQL문법들을 이해하고 있고 Oracle만의 문법 또한 이해하며 활용할 수 있습니다.</p>
+                                <p class="title">JSP/Servlet</p>
+                                <p class="date">
+                                    JSP에서 HTML코드 및 EL 등을 활용하여 웹페이지를 구현할 수 있습니다.<br>
+                                    Servlet을 이용하여 클라이언트와 서버간의 요청 및 응답에 대한 값을 전달할 수 있습니다.
+                                </p>
+                                <p class="title">Spring-Framework</p>
+                                <p class="date">기본적인 초기 설정값 부터 웹페이지 구현까지 흐름을 이해하고 있고 웹페이지를 구현할 수 있습니다.</p>
+                                <p class="title">MyBatis</p>
+                                <p class="date">MyBatis를 이용하여 JDBC연결 및 동적쿼리 사용도 가능합니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
