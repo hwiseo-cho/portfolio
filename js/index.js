@@ -9,10 +9,17 @@ $(function(){
         $("#profileContent").hide();
         $("#projectContent").show();
         $("#aboutContent").hide();
-    })
+    });
     $("#About").on("click",function(){
         $("#profileContent").hide();
         $("#projectContent").hide();
         $("#aboutContent").show();
-    })
+    });
+    $("#btn1").on("click",function(){
+        $("#modal1").show();
+        $(".mVideo").play();
+    });
+    $(".close").on("click",function(){
+        $(".modal").hide();
+    });
 });
