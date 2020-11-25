@@ -14,6 +14,7 @@
     p>a{text-decoration: none; color: black;}
     table{border-spacing: 0; border: 1px solid #dbdbdb; width: 101%;}
     td{border: 1px solid #dbdbdb;}
+    hr{width: 90%; margin-left: -13px;}
     body{margin: 0;}
     #wrapper{width: 100%;  height: 800px; background-color: #fafafa; box-sizing: border-box;}
     #wrapper>div{ margin: 0;box-sizing: border-box;}
@@ -55,6 +56,16 @@
     .boxes{border: 2px solid #dbdbdb; width: 100px; float: left; margin-left: 13px;height: 48px;}
     .s{line-height: 46px;}
     .detailBtn{width: 100%; height: 35px; margin-top: 20px; background-color: cornflowerblue; border: none;color: white; font-size: 15px;}
+    .modal {display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
+    .modal-content {background-color: #fefefe; margin: 4% auto; border: 1px solid #888; width: 80%; height: 520px;}
+    .close {color: #aaa; float: right; font-size: 14px; font-weight: bold; margin-right: 5px;}
+    .close:hover,.close:focus {color: black; text-decoration: none; cursor: pointer;}
+    #mCon1{width: 100%; height: 5%; border-bottom: 0.5px solid #dbdbdb;}
+    #mCon2{width: 100%; height: 95%; overflow-y: scroll; margin-left: 5%;}
+    #mCon2::-webkit-scrollbar{display: none;}
+    #mCon2>p{text-align: left;}
+    .mImg{width: 90%; margin-left: -100px;}
+    .mVideo{width: 90%; margin-left: -100px;}
 </style>
 </head>
 <body>
@@ -82,7 +93,7 @@
                             <div id="profileCon1">
                                 <p id="info"><b>Info</b></p>
                                 <div id="profile">
-                                    <img id="profileImg" src="images/프로필.jpg" alt="">
+                                    <img id="profileImg" src="#" alt="">
                                 </div>
                                 <p class="title">- Introduce</p>
                                 <p class="aboutTitle">
@@ -175,7 +186,7 @@
                                 <div class="boxes">Spring-WebSocket</div>
                                 <div class="boxes s">MyBatis</div>
                                 <div class="boxes s">JSON</div>
-                                <button class="detailBtn">Go Detail</button>
+                                <button id="btn1" class="detailBtn">Go Detail</button>
                             </div>
                             <div id="projectCon2">
                                 <p id="info"><b>BOOKTIFULMUSIC</b></p><br><br><br>
@@ -223,7 +234,127 @@
                         </div>
                     </div>
                 </div>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <div id="mCon1">
+                            <span class="close">
+                                &times;
+                            </span>
+                        </div>
+                        <div id="mCon2">
+                            <p class="title">- 구현 기능</p>
+                            <p class="aboutTitle">
+                                ●	Index 페이지<br>
+                                -	로그인을 할 수 있는 화면 구현<br>
+                                -	회원가입, 아이디/비밀번호 찾기 페이지 이동<br>
+                                -	회원가입은 이메일을 통해 인증<br>
+                                -	아이디 찾기는 회원가입시 작성한 이름, 이메일 주소를 통해 찾기 가능<br>
+                                -	비밀번호는 아이디, 이메일 주소를 입력하여 입력한 이메일 주소로 임 시비밀번호 전송<br><br>
+                                ●	메인 페이지<br>
+                                -	로그인 후 이동하는 페이지<br>
+                                -	자신이 올린 피드(게시물), 그룹 피드, 추천 피드를 작성한 시간순으로 리스트 뽑기 <br>
+                                -	왼쪽에는 홈, 채팅, 그룹페이지, 설정페이지를 이용할 수 있는 메뉴 구현<br>
+                                -	header부분에는 로그인한 사용자의 이름과 이미지 구현 및 클릭 시 마이페이지 이동<br>
+                                -	전체 검색(사용자, 피드, 그룹)을 통해 입력한 키워드에 관련되는 정보 출력<br><br>
+                                ●	채팅 페이지<br>
+                                -	메뉴의 채팅 아이콘 클릭 시 보일 수 있게 구현<br>
+                                -	실시간 채팅으로 구현<br>
+                                -	일대일과 그룹채팅으로 구분<br><br>
+                                ●	그룹 페이지<br>
+                                -	메뉴의 그룹 아이콘 클릭 시 이동<br>
+                                -	페이지 상단에는 추천 그룹 출력<br>
+                                -	그룹에서 작성한 피드를 시간순으로 리스트 출력<br>
+                                -	그룹 생성, 가입, 관리, 수정, 삭제 기능 구현<br><br>
+                                ●	마이 페이지<br>
+                                -	개인 정보 수정<br>
+                                -	사용자가 올린 게시물 확인<br>
+                                -	보관함 생성을 통해 게시물을 관리 가능<br>
+                                -	사용자가 가입한 그룹 확인<br><br>
+                                ●	설정 페이지<br>
+                                -	알림, 공개 범위 설정 및 문의사항 작성<br><br>
+                                ●	회원 서비스<br>
+                                -	가입 / 정보수정 / 탈퇴 / 아이디, 비밀번호 찾기 / 피드(게시물) 작성, 수정, 삭제/ 그룹 생성,수정,삭제,가입 <br>/ 일대일 채팅, 그룹 채팅 / 문의사항 작성 
 
+                            </p>
+                            <p class="title">- 담당 역할</p>
+                            <p class="aboutTitle">
+                                ●	기능 구현 (기여도 15% - 7명)<br>
+                                -	로그인 및 회원가입, 로그아웃 서비스<br>
+                                -	아이디, 비밀번호 찾기 서비스<br>
+                                -	실시간 채팅(일대일, 그룹)<br>
+                                -	버튼 클릭 시 게시물 스크롤바 최상단으로 가기<br>
+                            </p>
+                            <p class="title">- DB 설계</p>
+                            <img src="images/파이널디비.png" class="mImg" alt="">
+                            <p class="title">- 기능 시연 영상</p>
+                            <hr>
+                            <p class="date">1. 채팅</p>
+                            <p class="date">- 채팅방 생성</p>
+                            <video src="video/채팅방생성.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video>
+                            <p class="date">- 일대일 채팅</p>
+                            <video src="video/채팅1.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video><br>
+                            <video src="video/채팅2.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video>
+                            <p class="date">- 채팅방 나가기</p>
+                            <video src="video/채팅방나가기.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video>
+                            <hr>
+                            <p class="date">2. 회원가입</p>
+                            <video src="video/회원가입.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video><br>
+                            <video src="video/회원가입인증.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video>
+                            <hr>
+                            <p class="date">3. 아이디 찾기</p>
+                            <video src="video/아이디찾기.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video>
+                            <hr>
+                            <p class="date">4. 비밀번호 찾기</p>
+                            <video src="video/비밀번호찾기.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video><br>
+                            <video src="video/임시비밀번호.mp4" class="mVideo" autoplay="autoplay" muted="muted" loop="loop"></video>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <div id="mCon1">
+                            <span class="close">
+                                &times;
+                            </span>
+                        </div>
+                        <div id="mCon2">
+                            <p class="title">- 구현 기능</p>
+                            <p class="aboutTitle">
+                                ●	메인 페이지<br>
+                                -	메인 페이지에는 장르별 음원 및 도서 이미지와 카테고리에 맞게 페이지 연결<br>
+                                -	통합 검색을 통해 입력한 키워드가 포함된 도서, 음원 각각 결과 출력<br><br>
+                                ●	도서 페이지<br>
+                                -	도서는 베스트셀러 TOP100과 장르별로 게시판 형식으로 구현<br>
+                                -	좋아요<br>
+                                -	디테일 페이지에서 리뷰 작성<br><br>
+                                ●	음원 페이지<br>
+                                -	음원은 음원차트 TOP100과 취향별로 게시판 형식으로 구현<br>
+                                -	좋아요<br>
+                                -	디테일 페이지에서 리뷰 작성<br><br>
+                                ●	문의사항 페이지<br>
+                                -	문의사항은 공지, 상품, 배송, 자주하는 질문으로 나누어 게시판 형식으로 구현하고 admin 계정으로 들어가면 답변하기 버튼 활성화<br><br>
+                                ●	관리자 페이지<br>
+                                -	로그인 시 admin 계정일 경우 상단에 마이페이지 버튼을 관리자페이지 버튼으로 변경하여 접근할 수 있도록 구현<br>
+                                -	관리자 메인 페이지 로딩 시 Ajax로 등록된 음원, 도서, 회원, 공지사항 수 불러오기<br>
+                                -	관리자 메인 페이지에 공지사항 게시판 형식(등록날짜 순)으로 등록/삭제/수정/검색(번호, 제목) 가능하도록 구현<br>
+                                -	음원 및 도서 각 페이지마다 게시판 형식(등록날짜 순)으로 등록/삭제/수정/검색 할 수 있도록 구현<br>
+                                -	회원은 삭제/검색만 가능하도록 구현<br>
+                                -	문의사항은 문의 리스트만 보고 답변은 사용자 문의사항 등록페이지에서 등록하도록 구현<br><br>
+                                ●	회원 서비스<br>
+                                -	가입 / 정보수정 / 탈퇴 / 아이디, 비밀번호 찾기 / 도서 장바구니 / 도서 구매 / 음원 좋아요 / 음원 리뷰 작성, 수정, 삭제 / 문의사항<br> 등록, 수정, 삭제 <br>
+                            </p>
+                            <p class="title">- 담당 역할</p>
+                            <p class="aboutTitle">
+                                ●	기능 구현 (기여도 25% - 7명)<br>
+                                -	관리자 페이지(공지/음원/도서/회원/자주하는 질문 검색,등록,수정,삭제)<br>
+                                -	메인 페이지(이미지를 click시 키워드에 맞게 페이지 이동)<br>
+                                -	Footer(이용약관, 개인정보처리방침, 운영정책)<br>
+                            </p>
+                            <p class="title">- DB 설계</p>
+                            <img src="images/세미디비.png" class="mImg" >
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
