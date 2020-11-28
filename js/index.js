@@ -24,6 +24,6 @@ $(function(){
     $(".close").on("click",function(){
         $(".modal").hide();
     });
-     $(".mVideo").play();
+    $(".mVideo").play();
     $(".mVideo2").play();
 });
