@@ -17,15 +17,18 @@ $(function(){
     });
     $("#btn1").on("click",function(){
         $("#modal1").show();
-        $(".mVideo").play();
     });
     $("#btn2").on("click",function(){
         $("#modal2").show();
-        $(".mVideo2").play();
     });
     $(".close").on("click",function(){
         $(".modal").hide();
     });
     
     
+});
+$(document).keydown(function(event) {
+    if ( event.keyCode == 27 || event.which == 27 ) {
+        $(".modal").hide();
+    }
 });
