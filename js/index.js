@@ -17,13 +17,15 @@ $(function(){
     });
     $("#btn1").on("click",function(){
         $("#modal1").show();
+        $(".mVideo").play();
     });
     $("#btn2").on("click",function(){
         $("#modal2").show();
+        $(".mVideo2").play();
     });
     $(".close").on("click",function(){
         $(".modal").hide();
     });
-    $(".mVideo").play();
-    $(".mVideo2").play();
+    
+    
 });
